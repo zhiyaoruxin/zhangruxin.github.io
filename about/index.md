@@ -5,8 +5,7 @@ layout: true
 comment: true
 tag:
 ---
-持之以恒
-<!--more-->
+持之以恒 
 ## 我
 爱好： 美食、追剧、心理学
 人格类型： 
@@ -14,9 +13,9 @@ tag:
 ![人格类型之调停者测试结果](2.png)
 ## 博客相关
 创立于：2020年04月15日
-{% blockquote %}
-    第一次尝试建立自己的博客。
-{% endblockquote %}
+ 
+第一次尝试建立自己的博客。
+ 
 话题：阅读、心理、音乐
 程序：Hexo
 主题：nexmoe https://nexmoe.com/hexo-theme-nexmote.html
