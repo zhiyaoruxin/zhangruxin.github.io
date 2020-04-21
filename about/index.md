@@ -1,10 +1,10 @@
 ---
-title: 关于
+title: 向日葵
 date: 2020-04-16 14:19:00
 layout: true
 comment: true
 tag:
-cover: about.jpg
+cover: about2.jpg
 coverHeight: 960
 coverWidth: 1440
 ---
@@ -30,11 +30,7 @@ https://music.163.com/#/song?id=1334088449
 *   已达成 
     *   <input checked="" disabled="" type="checkbox"> 一个自己的博客模板 
     *   <input checked="" disabled="" type="checkbox"> 自己的项目
-    *   <input checked="" disabled="" type="checkbox"> 自己的电话号码
-    *   <input checked="" disabled="" type="checkbox"> 一台用起来流畅的电脑 
-    *   <input checked="" disabled="" type="checkbox"> 烂兄烂弟
-    *   <input checked="" disabled="" type="checkbox"> 有一群准码农朋友
-    *   <input checked="" disabled="" type="checkbox"> 几个超级负责的群管
+    *   <input checked="" disabled="" type="checkbox"> 自己的电话号码   
 +   注定的遗憾 
     +   <input disabled="" type="checkbox"> 考研之路  
 
