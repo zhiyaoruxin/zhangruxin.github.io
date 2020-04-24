@@ -4,7 +4,7 @@
 
 <head>
   
-  <title>生物维生素概述 - 张如心</title>
+  <title>9个技巧，让if else更优雅 - 张如心</title>
   <meta charset="UTF-8">
   <meta name="description" content="张如心个人成长博客">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
@@ -12,21 +12,21 @@
   
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/png" />
-  <meta name="description" content="维生素是任何动物维持正常的生理功能而必须从食物中获取的一类微量有机物质，在人体生长、代谢、发育过程中发挥着重要的作用。维生素既不参与构成人体细胞，也不为人体提供能量。">
+  <meta name="description" content="if else 是我们写代码时，使用频率最高的关键字之一，本文主要详解如何让看起来烦人的if else看起来更优雅。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="生物维生素概述">
-<meta property="og:url" content="http://zrxmzy.github.io.git/2020/04/17/wsx.html/">
+<meta property="og:title" content="9个技巧，让if else更优雅">
+<meta property="og:url" content="http://zrxmzy.github.io.git/2020/04/24/ifelse/">
 <meta property="og:site_name" content="张如心">
-<meta property="og:description" content="维生素是任何动物维持正常的生理功能而必须从食物中获取的一类微量有机物质，在人体生长、代谢、发育过程中发挥着重要的作用。维生素既不参与构成人体细胞，也不为人体提供能量。">
+<meta property="og:description" content="if else 是我们写代码时，使用频率最高的关键字之一，本文主要详解如何让看起来烦人的if else看起来更优雅。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-04-17T07:42:34.000Z">
-<meta property="article:modified_time" content="2020-04-23T11:09:43.362Z">
+<meta property="article:published_time" content="2020-04-24T01:24:37.000Z">
+<meta property="article:modified_time" content="2020-04-24T02:21:52.557Z">
 <meta property="article:author" content="ZhangRuxin">
-<meta property="article:tag" content="life">
+<meta property="article:tag" content="java">
 <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/gh/nexmoe/nexmoe.github.io@latest/css/style.css,npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css" crossorigin>
   
-  <!--<link rel="stylesheet" href="/css/style.css?v=1587695084570">-->
+  <!--<link rel="stylesheet" href="/css/style.css?v=1587695084710">-->
 
    
     <style>
@@ -213,15 +213,15 @@
   
   
       <div class="nexmoe-post-cover" style="padding-bottom: 66.66666666666666%;"> 
-          <img data-src="/images/weishengsu.jpg" data-sizes="auto" alt="生物维生素概述" class="lazyload">
-          <h1>生物维生素概述</h1>
+          <img data-src="/images/ifelse.jpg" data-sizes="auto" alt="9个技巧，让if else更优雅" class="lazyload">
+          <h1>9个技巧，让if else更优雅</h1>
       </div>
   
   
   <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
-    <a><i class="nexmoefont icon-calendar-fill"></i>2020年04月17日</a>
-    <a><i class="nexmoefont icon-areachart"></i>862 字</a>
-    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 3 分钟</a>
+    <a><i class="nexmoefont icon-calendar-fill"></i>2020年04月24日</a>
+    <a><i class="nexmoefont icon-areachart"></i>1.2k 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 5 分钟</a>
 </div>
 
   <div class="nexmoe-post-right">
@@ -229,7 +229,7 @@
       <div class="nexmoe-fixed">
         <div class="nexmoe-valign">
             <div class="nexmoe-toc">
-                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#维生素A"><span class="toc-number">1.</span> <span class="toc-text">维生素A</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#维生素B6"><span class="toc-number">2.</span> <span class="toc-text">维生素B6</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#维生素B12"><span class="toc-number">3.</span> <span class="toc-text">维生素B12</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#维生素C"><span class="toc-number">4.</span> <span class="toc-text">维生素C</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#维生素D"><span class="toc-number">5.</span> <span class="toc-text">维生素D</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#维生素E"><span class="toc-number">6.</span> <span class="toc-text">维生素E</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#维生素K"><span class="toc-number">7.</span> <span class="toc-text">维生素K</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#哪些有关维生素的误区"><span class="toc-number">8.</span> <span class="toc-text">哪些有关维生素的误区</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#那些人需要补充维生素？"><span class="toc-number">9.</span> <span class="toc-text">那些人需要补充维生素？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#补充维生素原则"><span class="toc-number">10.</span> <span class="toc-text">补充维生素原则</span></a></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-使用return"><span class="toc-number">1.</span> <span class="toc-text">1. 使用return</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-使用Map"><span class="toc-number">2.</span> <span class="toc-text">2. 使用Map</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-使用三元运算符"><span class="toc-number">3.</span> <span class="toc-text">3. 使用三元运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-合并表达式"><span class="toc-number">4.</span> <span class="toc-text">4. 合并表达式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-使用枚举"><span class="toc-number">5.</span> <span class="toc-text">5. 使用枚举</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-使用Optional"><span class="toc-number">6.</span> <span class="toc-text">6. 使用Optional</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-梳理优化判断逻辑"><span class="toc-number">7.</span> <span class="toc-text">7. 梳理优化判断逻辑</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-使用多态"><span class="toc-number">8.</span> <span class="toc-text">8. 使用多态</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-选择性的使用switch"><span class="toc-number">9.</span> <span class="toc-text">9. 选择性的使用switch</span></a></li></ol>
             </div>
         </div>
       </div>
@@ -237,36 +237,247 @@
   </div>
 
   <article>
-    <p>维生素是任何动物维持正常的生理功能而必须从食物中获取的一类微量有机物质，在人体生长、代谢、发育过程中发挥着重要的作用。<br>维生素既不参与构成人体细胞，也不为人体提供能量。<br><a id="more"></a></p>
-<h2 id="维生素A"><a href="#维生素A" class="headerlink" title="维生素A"></a>维生素A</h2><p>&emsp;&emsp;作用<br>    &emsp;&emsp;&emsp;&emsp;增强视力。维持粘膜正常功能，令皮肤光洁幼嫩。<br>&emsp;&emsp;被需要<br>    &emsp;&emsp;&emsp;&emsp;夜盲症、眼球干燥、皮肤干燥及痕痒。<br>&emsp;&emsp;来源<br>    &emsp;&emsp;&emsp;&emsp;红萝卜、绿叶蔬菜、蛋黄、动物肝脏等。 </p>
-<h2 id="维生素B6"><a href="#维生素B6" class="headerlink" title="维生素B6"></a>维生素B6</h2><p>&emsp;&emsp;作用<br>    &emsp;&emsp;&emsp;&emsp;保持身体及精神系统处于正常状况，维持体内钠、钾平衡，制造红血球。<br>&emsp;&emsp;被需要<br>    &emsp;&emsp;&emsp;&emsp;贫血、抽筋、头痛、脱皮、呕吐、暗疮。<br>&emsp;&emsp;来源<br>    &emsp;&emsp;&emsp;&emsp;瘦肉、果仁、糙米、绿叶蔬菜、香蕉。  </p>
-<h2 id="维生素B12"><a href="#维生素B12" class="headerlink" title="维生素B12"></a>维生素B12</h2><p>&emsp;&emsp;作用<br>    &emsp;&emsp;&emsp;&emsp;防止贫血，制造红血球，防止神经受到破坏。<br>&emsp;&emsp;被需要<br>    &emsp;&emsp;&emsp;&emsp;疲倦、精神抑郁、记忆力衰退、贫血。<br>&emsp;&emsp;来源<br>    &emsp;&emsp;&emsp;&emsp;肝、鱼、牛奶。</p>
-<h2 id="维生素C"><a href="#维生素C" class="headerlink" title="维生素C"></a>维生素C</h2><p>&emsp;&emsp;作用<br>    &emsp;&emsp;&emsp;&emsp;抗氧化，改善胆固醇代谢，增强免疫力，改善铁、钙和叶酸的利用。<br>&emsp;&emsp;被需要<br>    &emsp;&emsp;&emsp;&emsp;牙肉出血，牙齿脱落易患感冒，伤口愈合缓慢，皮下出血，消化不良等。<br>&emsp;&emsp;来源<br>    &emsp;&emsp;&emsp;&emsp;水果(特别是橙类)、绿色蔬菜、蕃茄、马铃薯等。</p>
-<h2 id="维生素D"><a href="#维生素D" class="headerlink" title="维生素D"></a>维生素D</h2><p>&emsp;&emsp;作用<br>    &emsp;&emsp;&emsp;&emsp;有助小孩牙齿及骨骼发育，补充成人骨骼所需钙质，防止骨质疏松症。<br>&emsp;&emsp;被需要<br>    &emsp;&emsp;&emsp;&emsp;小孩软骨病、食欲不振，腹泻等。<br>&emsp;&emsp;来源<br>    &emsp;&emsp;&emsp;&emsp;鱼肝油、奶制品、蛋。</p>
-<h2 id="维生素E"><a href="#维生素E" class="headerlink" title="维生素E"></a>维生素E</h2><p>&emsp;&emsp;作用<br>    &emsp;&emsp;&emsp;&emsp;抗氧化，预防衰老，提高抗感染能力，改善伤口回复平滑，有助降低血压。<br>&emsp;&emsp;被需要<br>    &emsp;&emsp;&emsp;&emsp;红血球受到破坏，神经受到损害，不育症，手脚皲裂、肌肉受损，子宫机能衰退。<br>&emsp;&emsp;来源<br>    &emsp;&emsp;&emsp;&emsp;冷榨植物油、深绿色蔬菜、蛋、牛奶、肝、麦、及果仁。</p>
-<h2 id="维生素K"><a href="#维生素K" class="headerlink" title="维生素K"></a>维生素K</h2><p>&emsp;&emsp;作用<br>    &emsp;&emsp;&emsp;&emsp;凝血作用，有助修补及骨骼的生长。<br>&emsp;&emsp;被需要<br>    &emsp;&emsp;&emsp;&emsp;不正常体内出血。<br>&emsp;&emsp;来源<br>    &emsp;&emsp;&emsp;&emsp;西兰花椰菜花。椰菜。蛋黄。肝等。</p>
-<h2 id="哪些有关维生素的误区"><a href="#哪些有关维生素的误区" class="headerlink" title="哪些有关维生素的误区"></a>哪些有关维生素的误区</h2><ol>
-<li>误区一<br>× 人人都缺维生素<br>√ 一般人群通过饮食都能摄取都不缺，补充有适用人群</li>
-<li>误区二<br>× 维生素能治病<br>√ 同一种病病因多样，盲目补充维生素并不一定对症</li>
-<li>误区三<br>× 补维生素能代替均衡饮食<br>√ 维生素需 协同作战 ，大量服用一两种作用有限</li>
-</ol>
-<h2 id="那些人需要补充维生素？"><a href="#那些人需要补充维生素？" class="headerlink" title="那些人需要补充维生素？"></a>那些人需要补充维生素？</h2><p>&emsp;&emsp;摄入量少的，如偏食或减肥的人。<br>&emsp;&emsp;需要量大的，如孕妇、青春期的少年。<br>&emsp;&emsp;消化吸收差的人群比如老人、胃肠道疾病患者和特殊疾病群体。</p>
-<h2 id="补充维生素原则"><a href="#补充维生素原则" class="headerlink" title="补充维生素原则"></a>补充维生素原则</h2><p>&emsp;&emsp;最天然的维生素还是要从正常饮食中摄取。<br>&emsp;&emsp;补充维生素不能过量。<br>&emsp;&emsp;最好有医生、营养师指导。</p>
+    <p>if else 是我们写代码时，使用频率最高的关键字之一，本文主要详解如何让看起来烦人的if else看起来更优雅。<br><a id="more"></a><br>本文提供了9中方法来解决那些”烦人”的if else</p>
+<h2 id="1-使用return"><a href="#1-使用return" class="headerlink" title="1. 使用return"></a>1. 使用return</h2><ul>
+<li>优化前代码<pre><code>  if (str.equals(&quot;java&quot;)) {
+      // 业务代码 ! true;
+  } else {
+      return ;
+  }
+</code></pre></li>
+<li>优化后代码<pre><code>  if (str.equals(&quot;java&quot;)) {
+     return ;
+  }
+  return false; 
+</code></pre></li>
+</ul>
+<h2 id="2-使用Map"><a href="#2-使用Map" class="headerlink" title="2. 使用Map"></a>2. 使用Map</h2><ul>
+<li>优化前代码：<pre><code>  if (t == 1) {
+      type = &quot;name&quot;;
+  } else if (t == 2) {
+      type = &quot;id&quot;;
+  } else if (t == 3) {
+      type = &quot;mobile&quot;;
+  }
+</code></pre></li>
+<li>我们先定义一个 Map 数组，把相关判断信息存储起来：<pre><code>  Map&lt;Integer, String&gt; typeMap = new HashMap&lt;&gt;();
+  typeMap.put(1, &quot;name&quot;);
+  typeMap.put(2, &quot;id&quot;);
+  typeMap.put(3, &quot;mobile&quot;);
+</code></pre></li>
+<li>之前的判断语句可以使用以下一行代码代替了：<pre><code>  type = typeMap.get(ty);
+</code></pre></li>
+</ul>
+<h2 id="3-使用三元运算符"><a href="#3-使用三元运算符" class="headerlink" title="3. 使用三元运算符"></a>3. 使用三元运算符</h2><p>三元运算符也叫三元表达式或三目运算符/表达式</p>
+<ul>
+<li>优化前代码：<pre><code>  Integer score = 81;
+  if (score &gt; 80) {
+      score = 100;
+  } else {
+      score = 60;
+  }
+</code></pre></li>
+<li>优化后代码：<pre><code>  score = score &gt; 80 ? 100 : 60;
+</code></pre></li>
+</ul>
+<h2 id="4-合并表达式"><a href="#4-合并表达式" class="headerlink" title="4. 合并表达式"></a>4. 合并表达式</h2><p>在项目中有些逻辑判断可以通过梳理和归纳，变更为更简单易懂的逻辑判断代码</p>
+<ul>
+<li>优化前代码：<pre><code>  String city = &quot;西安&quot;;
+  String area = &quot;029&quot;;
+  String province = &quot;陕西&quot;;
+  if (&quot;西安&quot;.equals(city)) {
+      return &quot;xi&#39;an&quot;;
+  }
+  if (&quot;029&quot;.equals(area)) {
+      return &quot;xi&#39;an&quot;;
+  }
+  if (&quot;陕西&quot;.equals(province)){
+      return &quot;xi&#39;an&quot;;
+  }
+</code></pre></li>
+<li>优化后代码：<pre><code>  if (&quot;西安&quot;.equals(city) || &quot;029&quot;.equals(area) || &quot;陕西&quot;.equals(province)){
+      return &quot;xi&#39;an&quot;;
+  }
+</code></pre></li>
+</ul>
+<h2 id="5-使用枚举"><a href="#5-使用枚举" class="headerlink" title="5. 使用枚举"></a>5. 使用枚举</h2><p>JDK1.5 引入了新的类型 - 枚举（enum）</p>
+<ul>
+<li>优化前代码：<pre><code>  Integer typeId = 0;
+  String type = &quot;Name&quot;;
+  if (&quot;Name&quot;.equals(type)) {
+      typeId = 1;
+  } else if (&quot;Age&quot;.equals(type)) {
+      typeId = 2;
+  } else if (&quot;Address&quot;.equals(type)) {
+      typeId = 3;
+  }
+</code></pre></li>
+<li>优化时，我们先来定义一个枚举：<pre><code>  public enum TypeEnum {
+      Name(1), Age(2), Address(3);
+      public Integer typeId;
+      TypeEnum(Integer typeId) {
+          this.typeId = typeId;
+      }
+  }
+</code></pre></li>
+<li>之前的 if else 判断就可以被如下一行代码所替代了：<pre><code>  typeId = TypeEnum.valueOf(&quot;Name&quot;).typeId;
+</code></pre></li>
+</ul>
+<h2 id="6-使用Optional"><a href="#6-使用Optional" class="headerlink" title="6. 使用Optional"></a>6. 使用Optional</h2><p>JDK1.8 引入了Optional类，JDK1.9进行了改造，增加了ifPresentOrElse()方法</p>
+<ul>
+<li>优化前代码：<pre><code>  String str = &quot;java&quot;;
+  if (str == null) {
+      System.out.println(&quot;Null&quot;);
+  } else {
+      System.out.println(str);
+  }
+</code></pre></li>
+<li>优化后代码：<pre><code>  Optional&lt;String&gt; opt = Optional.of(&quot;java&quot;);
+  opt.ifPresentOrElse(v -&gt; 
+  System.out.println(v), () -&gt; System.out.println(&quot;Null&quot;));
+</code></pre><strong> 小贴士：注意运行版本，必须是 JDK 9+ 才行。</strong></li>
+</ul>
+<h2 id="7-梳理优化判断逻辑"><a href="#7-梳理优化判断逻辑" class="headerlink" title="7. 梳理优化判断逻辑"></a>7. 梳理优化判断逻辑</h2><ul>
+<li>优化前代码：<pre><code>  // 年龄大于 18
+  if (age &gt; 18) {
+      // 工资大于 5000
+      if (salary &gt; 5000) {
+          // 是否漂亮
+          if (pretty == true) {
+              return true;
+          }
+      }
+  }
+  return false;
+</code></pre></li>
+<li>优化后代码：<pre><code>  if (age &lt; 18) {
+      return false;
+  }
+  if (salary &lt; 5000) {
+      return false;
+  }
+  return pretty == true; 
+</code></pre><strong> 我们需要尽量把表达式中的包含关系改为平行关系，这样代码可读性更高，逻辑更清晰。</strong></li>
+</ul>
+<h2 id="8-使用多态"><a href="#8-使用多态" class="headerlink" title="8. 使用多态"></a>8. 使用多态</h2><p>封装、继承和多态是OOP（面向对象编程）的重要思想，提供一种去除ifelse方法</p>
+<ul>
+<li>优化前代码：<pre><code>  Integer typeId = 0;
+  String type = &quot;Name&quot;;
+  if (&quot;Name&quot;.equals(type)) {
+      typeId = 1;
+  } else if (&quot;Age&quot;.equals(type)) {
+      typeId = 2;
+  } else if (&quot;Address&quot;.equals(type)) {
+      typeId = 3;
+  }
+</code></pre></li>
+<li><p>使用多态，我们先定义一个接口，在接口中声明一个公共返回 typeId 的方法，在添加三个子类分别实现这三个子类，实现代码如下：</p>
+<pre><code>  public interface IType {
+      public Integer getType();
+  }
+
+  public class Name implements IType {
+      @Override
+      public Integer getType() {
+          return 1;
+      }
+  }
+
+  public class Age implements IType {
+      @Override
+      public Integer getType() {
+          return 2;
+      }
+  }
+
+  public class Address implements IType {
+      @Override
+      public Integer getType() {
+          return 3;
+      }
+  }
+</code></pre><p><strong> 注意：为了简便我们这里把类和接口放到了一个代码块中，在实际开发中应该分别创建一个接口和三个类分别存储。</strong></p>
+</li>
+<li>此时，我们之前的 if else 判断就可以改为如下代码：<pre><code>  IType itype = (IType) Class.forName(&quot;com.example.&quot; + type).newInstance();
+  Integer typeId = itype.getType();
+</code></pre></li>
+</ul>
+<h2 id="9-选择性的使用switch"><a href="#9-选择性的使用switch" class="headerlink" title="9. 选择性的使用switch"></a>9. 选择性的使用switch</h2><p>ifelse和switch两者都能使用的情况下，可以尽可能使用switch，因为switch在常量分支选择时，switch性能会比ifelse高</p>
+<ul>
+<li>if else 判断代码：<pre><code>  if (cmd.equals(&quot;add&quot;)) {
+      result = n1 + n2;
+  } else if (cmd.equals(&quot;subtract&quot;)) {
+      result = n1 - n2;
+  } else if (cmd.equals(&quot;multiply&quot;)) {
+      result = n1 * n2;
+  } else if (cmd.equals(&quot;divide&quot;)) {
+      result = n1 / n2;
+  } else if (cmd.equals(&quot;modulo&quot;)) {
+      result = n1 % n2;
+  }
+</code></pre></li>
+<li>switch 代码：<pre><code>  switch (cmd) {
+      case &quot;add&quot;:
+          result = n1 + n2;
+          break;
+      case &quot;subtract&quot;:
+          result = n1 - n2;
+          break;
+      case &quot;multiply&quot;:
+          result = n1 * n2;
+          break;
+      case &quot;divide&quot;:
+          result = n1 / n2;
+          break;
+      case &quot;modulo&quot;:
+          result = n1 % n2;
+          break;
+  }
+</code></pre></li>
+<li>在 Java 14 可使用 switch 代码块，实现代码如下：<pre><code>  // java 14
+  switch (cmd) {
+      case &quot;add&quot; -&gt; {
+          result = n1 + n2;
+      }
+      case &quot;subtract&quot; -&gt; {
+          result = n1 - n2;
+      }
+      case &quot;multiply&quot; -&gt; {
+          result = n1 * n2;
+      }
+      case &quot;divide&quot; -&gt; {
+          result = n1 / n2;
+      }
+      case &quot;modulo&quot; -&gt; {
+          result = n1 % n2;
+      }
+  }
+</code></pre></li>
+</ul>
+<p><strong> 源自：’脚本之家’微信公众号 </strong></p>
 
   </article>
 
   <div class="nexmoe-post-meta nexmoe-rainbow">
     
-        <a class="nexmoefont icon-appstore-fill -link" href="/categories/%E5%81%A5%E5%BA%B7%E5%B8%B8%E8%AF%86/">健康常识</a>
+        <a class="nexmoefont icon-appstore-fill -link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>
     
     
-        <a class="nexmoefont icon-tag-fill -link" href="/tags/life/" rel="tag">life</a>
+        <a class="nexmoefont icon-tag-fill -link" href="/tags/java/" rel="tag">java</a>
     
 </div>
 
   <div class="nexmoe-post-footer">
     
       
+  <div class="nexmoe-post-copyright">
+    <strong>本文作者：</strong>ZhangRuxin<br>
+    <strong>本文链接：</strong><a href="http://zrxmzy.github.io.git/2020/04/24/ifelse/" title="http:&#x2F;&#x2F;zrxmzy.github.io.git&#x2F;2020&#x2F;04&#x2F;24&#x2F;ifelse&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;zrxmzy.github.io.git&#x2F;2020&#x2F;04&#x2F;24&#x2F;ifelse&#x2F;</a><br>
+    
+      <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+    
+  </div>
+
 
     
     <section class="nexmoe-comment">
@@ -291,7 +502,7 @@
   </div>
   <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js,gh/nexmoe/nexmoe.github.io@latest/js/app.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-<!--<script src="/js/app.js?v=1587695084577"></script>-->
+<!--<script src="/js/app.js?v=1587695084715"></script>-->
 
 
     <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
