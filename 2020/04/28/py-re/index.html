@@ -4,7 +4,7 @@
 
 <head>
   
-  <title>《解忧杂货店》 - ZRX</title>
+  <title>python正则re - ZRX</title>
   <meta charset="UTF-8">
   <meta name="description" content="张如心个人成长博客">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
@@ -12,21 +12,21 @@
   
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/png" />
-  <meta name="description" content="人生就是一张白纸，需要我们自己构图，绘色。心有多大，舞台就有多大。">
+  <meta name="description" content="关于python中正则表达式的使用整理一波">
 <meta property="og:type" content="article">
-<meta property="og:title" content="《解忧杂货店》">
-<meta property="og:url" content="http://zrxmzy.github.io.git/2020/04/21/melancholy/">
+<meta property="og:title" content="python正则re">
+<meta property="og:url" content="http://zrxmzy.github.io.git/2020/04/28/py-re/">
 <meta property="og:site_name" content="ZRX">
-<meta property="og:description" content="人生就是一张白纸，需要我们自己构图，绘色。心有多大，舞台就有多大。">
+<meta property="og:description" content="关于python中正则表达式的使用整理一波">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-04-21T08:52:17.000Z">
-<meta property="article:modified_time" content="2020-04-21T09:40:50.327Z">
+<meta property="article:published_time" content="2020-04-28T03:27:17.000Z">
+<meta property="article:modified_time" content="2020-04-28T04:03:42.247Z">
 <meta property="article:author" content="张如心">
-<meta property="article:tag" content="books">
+<meta property="article:tag" content="正则表达式">
 <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/gh/nexmoe/nexmoe.github.io@latest/css/style.css,npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css" crossorigin>
   
-  <!--<link rel="stylesheet" href="/css/style.css?v=1588055313180">-->
+  <!--<link rel="stylesheet" href="/css/style.css?v=1588055313398">-->
 
    
     <style>
@@ -220,14 +220,14 @@
   
   
       <div class="nexmoe-post-cover" style="padding-bottom: 66.66666666666666%;"> 
-          <img data-src="/images/melancholy.jpg" data-sizes="auto" alt="《解忧杂货店》" class="lazyload">
-          <h1>《解忧杂货店》</h1>
+          <img data-src="/images/python1.jpg" data-sizes="auto" alt="python正则re" class="lazyload">
+          <h1>python正则re</h1>
       </div>
   
   
   <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
-    <a><i class="nexmoefont icon-calendar-fill"></i>2020年04月21日</a>
-    <a><i class="nexmoefont icon-areachart"></i>1.7k 字</a>
+    <a><i class="nexmoefont icon-calendar-fill"></i>2020年04月28日</a>
+    <a><i class="nexmoefont icon-areachart"></i>1.5k 字</a>
     <a><i class="nexmoefont icon-time-circle-fill"></i>大概 6 分钟</a>
 </div>
 
@@ -236,7 +236,7 @@
       <div class="nexmoe-fixed">
         <div class="nexmoe-valign">
             <div class="nexmoe-toc">
-                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#解忧"><span class="toc-number">1.</span> <span class="toc-text">解忧</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#小孩问，不用学习怎样可以考100分-？"><span class="toc-number">1.0.0.1.</span> <span class="toc-text">小孩问，不用学习怎样可以考100分 ？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#保罗（浩介）询问要不要跟公司欠了巨债的父母连夜潜逃-？"><span class="toc-number">1.0.0.2.</span> <span class="toc-text">保罗（浩介）询问要不要跟公司欠了巨债的父母连夜潜逃 ？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#松岗克朗咨询该不该放弃音乐梦想，继承鱼店-？"><span class="toc-number">1.0.0.3.</span> <span class="toc-text">松岗克朗咨询该不该放弃音乐梦想，继承鱼店 ？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#静子的烦恼是要不要放弃奥运会的训练，陪生病的男友度过最后一段时光-？"><span class="toc-number">1.0.0.4.</span> <span class="toc-text">静子的烦恼是要不要放弃奥运会的训练，陪生病的男友度过最后一段时光 ？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#晴美询问要不要继续当陪酒女，做富岗的情人-？"><span class="toc-number">1.0.0.5.</span> <span class="toc-text">晴美询问要不要继续当陪酒女，做富岗的情人 ？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#三个少年（敦也、翔太、幸平）为了验证信是否真的会回到过去，便投了一封空白信-？"><span class="toc-number">1.0.0.6.</span> <span class="toc-text">三个少年（敦也、翔太、幸平）为了验证信是否真的会回到过去，便投了一封空白信 ？</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#《解忧杂货店》经典语录-（—东野圭吾）"><span class="toc-number">2.</span> <span class="toc-text">《解忧杂货店》经典语录 （—东野圭吾）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#感想"><span class="toc-number">3.</span> <span class="toc-text">感想</span></a></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#import-re"><span class="toc-number">1.</span> <span class="toc-text">import re</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#常用"><span class="toc-number">1.1.</span> <span class="toc-text">常用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#re模块常量"><span class="toc-number">1.2.</span> <span class="toc-text">re模块常量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#re模块函数"><span class="toc-number">1.3.</span> <span class="toc-text">re模块函数</span></a></li></ol></li></ol>
             </div>
         </div>
       </div>
@@ -244,44 +244,225 @@
   </div>
 
   <article>
-    <p>人生就是一张白纸，需要我们自己构图，绘色。心有多大，舞台就有多大。<br><a id="more"></a></p>
-<h2 id="解忧"><a href="#解忧" class="headerlink" title="解忧"></a>解忧</h2><ol>
-<li><h5 id="小孩问，不用学习怎样可以考100分-？"><a href="#小孩问，不用学习怎样可以考100分-？" class="headerlink" title="小孩问，不用学习怎样可以考100分 ？"></a>小孩问，不用学习怎样可以考100分 ？</h5>&emsp;&emsp;浪矢爷爷回答的。对问问题的小孩说，可以让老师给你一份考卷，全部都是关于你自己的问题，这样不管怎么回答都是100分。这样很机智的回答对小孩的人生有很大的帮助，后来小孩当了教师，面对不善交流的学生，想起来当时浪矢爷爷的回答，每天抽取一个学生，让其他学生回答关于他的问题，这样就增进了他们之间的感情交流。</li>
-<li><h5 id="保罗（浩介）询问要不要跟公司欠了巨债的父母连夜潜逃-？"><a href="#保罗（浩介）询问要不要跟公司欠了巨债的父母连夜潜逃-？" class="headerlink" title="保罗（浩介）询问要不要跟公司欠了巨债的父母连夜潜逃 ？"></a>保罗（浩介）询问要不要跟公司欠了巨债的父母连夜潜逃 ？</h5>&emsp;&emsp;浪矢爷爷回答的。如果没有决定离开，就相信自己的父母，只要一家人在一起，什么困难都会解决。但是浩介并没有听浪矢爷爷的建议，在途中逃跑了，后来到了丸光园。凭借自己的努力，成为了木雕大师。后来听说浪矢杂货店会在九月十三日复活，就去写回信了。到了附近的一家酒馆。酒馆的老板就是小时候买自己披头士唱片朋友的妹妹。在跟妹妹的交谈中，听到父母在当天逃跑的夜里三个人一起沉海自杀了，父亲没有死，上岸后又自杀了，母亲和儿子一起沉入海底，没有找到遗体。听到这里浩介很震惊。原来他当时讨厌憎恨的父母，为了保护他沉海自杀了。这样其他人就认为他也死了，自然就不会怀疑他活着。</li>
-<li><h5 id="松岗克朗咨询该不该放弃音乐梦想，继承鱼店-？"><a href="#松岗克朗咨询该不该放弃音乐梦想，继承鱼店-？" class="headerlink" title="松岗克朗咨询该不该放弃音乐梦想，继承鱼店 ？"></a>松岗克朗咨询该不该放弃音乐梦想，继承鱼店 ？</h5>&emsp;&emsp;三个少年回答的。克朗对音乐的执着在小时候就已经明显了，以至于后来大学的时候自主退学，去追逐音乐。但是生活并没有随他意愿。在几年后，父亲的身体越来越差，克朗需要在鱼店和音乐之间做个选择，很纠结。于是去咨询，给出的建议是追逐自己的梦想，所有的努力都不会白白付出。后来克朗还是没有实现，去了丸光园做了业余歌手，再一次火灾中为了就一个小男孩，去世了。小男孩的姐姐为了弟弟的恩人，将克朗音乐的梦想实现了。</li>
-<li><h5 id="静子的烦恼是要不要放弃奥运会的训练，陪生病的男友度过最后一段时光-？"><a href="#静子的烦恼是要不要放弃奥运会的训练，陪生病的男友度过最后一段时光-？" class="headerlink" title="静子的烦恼是要不要放弃奥运会的训练，陪生病的男友度过最后一段时光 ？"></a>静子的烦恼是要不要放弃奥运会的训练，陪生病的男友度过最后一段时光 ？</h5>&emsp;&emsp;三个少年回答的。静子是奥运会选手，男友是候补选手。不幸的是男友生病患癌，静子想放弃奥运会的训练陪伴男友，男友坚持要静子去参加训练，完成梦想。三个少年将知道的信息告诉了静子，让静子陪男友，放弃训练，因为日本在那一年放弃了参加奥运会。静子没有听从建议，还是去参加了训练，男友在一年之后去世了。静子也没有参加奥运会，但是静子并没有遗憾，因为他遵从了自己的内心。他很感激浪矢爷爷的回信。</li>
-<li><h5 id="晴美询问要不要继续当陪酒女，做富岗的情人-？"><a href="#晴美询问要不要继续当陪酒女，做富岗的情人-？" class="headerlink" title="晴美询问要不要继续当陪酒女，做富岗的情人 ？"></a>晴美询问要不要继续当陪酒女，做富岗的情人 ？</h5>&emsp;&emsp;三个少年回答的最后一封信。晴美从小失去父母，生活在丸光园，后来被自己姨妈收养，后来姨妈家落魄，晴美需要挣钱改善情况。但是找的正常的工作并不能支撑。所以下班时间去做了陪酒女。三个少年听了晴美的状况和烦恼，决定帮助晴美，告诉她随后几年经济会发生变化，房地产将会发生翻天覆地的变化。让晴美抓住机会，购买房子随后转手卖出。晴美虽然疑惑，但还是听从了建议。后来晴美如愿变成了大老板。她很感激当时的回信。</li>
-<li><h5 id="三个少年（敦也、翔太、幸平）为了验证信是否真的会回到过去，便投了一封空白信-？"><a href="#三个少年（敦也、翔太、幸平）为了验证信是否真的会回到过去，便投了一封空白信-？" class="headerlink" title="三个少年（敦也、翔太、幸平）为了验证信是否真的会回到过去，便投了一封空白信 ？"></a>三个少年（敦也、翔太、幸平）为了验证信是否真的会回到过去，便投了一封空白信 ？</h5>&emsp;&emsp;浪矢爷爷回答的最后一封信。  <blockquote>
-<p>空白表明没有地图，如果来咨询的人比做迷途的羔羊，那他们手里都有一张地图，只是没有去看不知道自己在何种位置。而你的地图是一张空白，即使想决定目的地，也不知道路在哪里。但换个角度想，因为是一张白纸，你可以随心所欲的描绘自己的地图，一切全在你自己。对于你来说，你是自由的，一切在你面前都有无限的可能。</p>
-</blockquote>
+    <p>关于python中正则表达式的使用整理一波<br><a id="more"></a></p>
+<h1 id="import-re"><a href="#import-re" class="headerlink" title="import re"></a>import re</h1><h2 id="常用"><a href="#常用" class="headerlink" title="常用"></a>常用</h2><ol>
+<li>正则表达式 - findall方法<br> re.findall(匹配规则，原始文本)  得到的是一个列表<pre><code> \d 表示匹配一个数字  \d\d\d表示匹配三个数字
+</code></pre></li>
+<li>正则表达式 - 非贪婪匹配（.*?）</li>
+</ol>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>正则表达式</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\d</td>
+<td style="text-align:left">匹配一个数字字符</td>
+</tr>
+<tr>
+<td>\w</td>
+<td style="text-align:left">匹配一个字母、数字及下划线字符</td>
+</tr>
+<tr>
+<td>\s</td>
+<td style="text-align:left">匹配一个空白字符</td>
+</tr>
+<tr>
+<td>\S</td>
+<td style="text-align:left">匹配一个非空白字符</td>
+</tr>
+<tr>
+<td>\n</td>
+<td style="text-align:left">匹配一个换行符</td>
+</tr>
+<tr>
+<td>\t</td>
+<td style="text-align:left">匹配一个制表符</td>
+</tr>
+<tr>
+<td>.</td>
+<td style="text-align:left">匹配一个任意的字符，换行符除外</td>
+</tr>
+<tr>
+<td>*</td>
+<td style="text-align:left">匹配前面的字符无限次直到停止</td>
+</tr>
+<tr>
+<td>?</td>
+<td style="text-align:left">常和.与*配合使用，组成非贪婪匹配</td>
+</tr>
+<tr>
+<td>()</td>
+<td style="text-align:left">匹配括号内的表达式，也表示一个组</td>
+</tr>
+<tr>
+<td>^</td>
+<td style="text-align:left">匹配行的开头</td>
+</tr>
+<tr>
+<td>\A</td>
+<td style="text-align:left">匹配字符串开头</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ol>
+<li><p>非贪婪匹配.*?</p>
+<pre><code class="lang-python">     res = &#39;&lt;h3 class=&quot;c-title&quot;&gt;&lt;a href=&quot;http://news.hexun.com/2018-12-12/195521925.html&quot; data-click=&quot;{一堆英文}&quot;&gt;&lt;em&gt;阿里巴巴&lt;/em&gt;电商脱贫成“教材” 累计培训逾万名县域干部&lt;/a&gt;&#39;
+     p_title = &#39;&lt;h3 class=&quot;c-title&quot;&gt;.*?&gt;(.*?)&lt;/a&gt;&#39;
+     result3 = re.findall(p_title,res)
+     print(result3)
+</code></pre>
 </li>
+<li><p>正则表达式 - 自动考虑换行<br> re.findall(匹配规则，原始文本，re.S)</p>
+</li>
+<li>正则表达式 - 小知识点<br> sub()方法：<pre><code> re.sub(需要替换的内容，替换值，源字符串)
+</code></pre> []中括号的用法<pre><code> 1. 在中括号里的内容不再有特殊含义
+     company = &#39;*华能信托&#39;
+     company = re.sub(&#39;[*]&#39;,company)
+     print(company)
+ 2. 表示某几个的范围，比如把日期中的年月日换成-号
+     date = &#39;2018年12月12日&#39;
+     date = re.sub(&#39;[年月日]&#39;，&#39;-&#39;,date)
+     date = date[:-1]
+     print(date)
+     date = date[:-1]其实是一个字符串切片，这个的含义就是取该字符串除了最后一个元素的其他元素
+</code></pre> 数据清洗并打印输出<pre><code> 清理新闻标题
+     字符串.strip()函数把不需要的空格和换行符去掉
+</code></pre></li>
 </ol>
-<h2 id="《解忧杂货店》经典语录-（—东野圭吾）"><a href="#《解忧杂货店》经典语录-（—东野圭吾）" class="headerlink" title="《解忧杂货店》经典语录 （—东野圭吾）"></a>《解忧杂货店》经典语录 （—东野圭吾）</h2><ol>
-<li>他们都是内心破了个洞，重要的东西正在从破洞逐渐流失。</li>
-<li>不过算了，你爱怎样就怎么样把。照你自己的意思去做，然后使劲后悔吧。</li>
-<li>在电影院看的时候，浩介之所以觉得演出很糟糕，大概是源于自己的心境。当时他已经不相信真情了。</li>
-<li>只要全家同舟共济，一起回到正路上也完全有可能。</li>
-<li>他不知道说什么好，大脑自动拒绝思考。</li>
-<li>跟没有干劲的人在一起厮混，只会徒增压力。</li>
-<li>其实所有纠结做选择的人心里早就有了答案，咨询只是想得到内心所倾向的选择。最终的所谓命运还是自己一步步走出来的。</li>
-<li>如果自己不想积极认真的活着，不管得到什么样的回答都没有用。</li>
-<li>要是什么都按照计划顺利实现，谁还用辛苦打拼？</li>
-<li>人的心声是绝对不能无视的。</li>
-<li>人与人之间情断义绝，并不需要什么具体的理由，就算表面上有，也很可能只是心已经离开的结果，事后才编造出来的接口而已。<u>(心，一旦离开了，就再不会回来)</u></li>
-</ol>
-<h2 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h2><ul>
-<li>衷心的祈祷你可以相信自己，无悔的燃烧自己的人生。</li>
-<li>用三个误入歧途的少年，讲述了人的善良，最后因为善良，三个少年迷途知返。书中的所有人都是善良的，正是因为他们都是善良的，所以最后的结果都是很美好的。</li>
+<h2 id="re模块常量"><a href="#re模块常量" class="headerlink" title="re模块常量"></a>re模块常量</h2><ul>
+<li>re模块中有9个常量，常量的值都是int类型</li>
 </ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>常量</th>
+<th>简写</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>re.IGNORECASE</td>
+<td>re.l</td>
+<td style="text-align:left">进行忽略大小写匹配</td>
+</tr>
+<tr>
+<td>re.ASCII</td>
+<td>re.A</td>
+<td style="text-align:left">让\w,\W,\b,\B,\d,\D,\s,\S只匹配ASCII，而不是Unicode</td>
+</tr>
+<tr>
+<td>re.DOTALL</td>
+<td>re.S</td>
+<td style="text-align:left">DOT表示.,ALL表示所有，连起来就是.匹配所有，包含换行符\n,默认模式下，是不能匹配换行符\n的</td>
+</tr>
+<tr>
+<td>re.MULTILINE</td>
+<td>re.M</td>
+<td style="text-align:left">多行模式，当某个字符串中有换行符\n，默认模式下是不支持换行符特性的，比如行开头和行结尾，而多行模式下是支持匹配行开头的</td>
+</tr>
+<tr>
+<td>re.VERBOSE</td>
+<td>re.X</td>
+<td style="text-align:left">详细模式，可以在正则表达式中加注解</td>
+</tr>
+<tr>
+<td>re.LOCALE</td>
+<td>re.L</td>
+<td style="text-align:left">由当前语言区域决定\w,\b和大小写敏感匹配，这个标识只能对byte样式有效</td>
+</tr>
+<tr>
+<td>re.UNICODE</td>
+<td>re.U</td>
+<td style="text-align:left">与ASCII模式类似，匹配Unicode编码支持的字符</td>
+</tr>
+<tr>
+<td>re.DEBUG</td>
+<td></td>
+<td style="text-align:left">显示编译时的debug信息</td>
+</tr>
+<tr>
+<td>re.TEMPLATE</td>
+<td>re.T</td>
+<td style="text-align:left">禁用回溯</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li>常量总结：<ol>
+<li>9个常量中，前5个（IGNORECASE,ASCII,DOTALL,MULTILINE,VERBOSE）有用处，有2个（LOCALE,UNICODE）官方不建议使用，2个（TEMPLATE,DEBUG）实验性功能，不能依赖</li>
+<li>常量在re常用函数中都可以使用。</li>
+<li>常量可叠加使用，因为常量值都是2的幂次方，叠加时使用|符号，不能使用+符号 如：re.findall(pattern,text,re.IGNORECASE|re.MULTILINE)</li>
+</ol>
+</li>
+</ul>
+<h2 id="re模块函数"><a href="#re模块函数" class="headerlink" title="re模块函数"></a>re模块函数</h2><p>re模块中有12个函数</p>
+<ol>
+<li>查找一个匹配项<ol>
+<li>search： 查找任意位置的匹配项</li>
+<li>match： 必须从字符串开头匹配</li>
+<li>fullmatch： 整个字符串与正则完全匹配<br>案例：<pre><code> import re
+ text = &#39;a猪哥大帅b，猪哥大帅b&#39;
+ pattern = r&#39;猪哥大帅b&#39;
+ print(re.search(pattern,text).group())  # 猪哥大帅b
+ print(re.match(pattern,text))  # None
+ print(re.fullmatch(pattern,text)) # None
+</code></pre>注： 查找一个匹配项，返回的都是一个匹配对象（Match）</li>
+</ol>
+</li>
+<li>查找多个匹配项<ol>
+<li>findall： 从字符串任意位置查找，返回一个列表</li>
+<li>finditer： 从字符串任意位置查找，返回一个迭代器<br>案例：<pre><code> import re
+ text = &#39;a猪哥大帅b，猪哥大帅b&#39;
+ pattern = r&#39;猪哥大帅b&#39;
+ print(re.findall(pattern,text)) # [&#39;猪哥大帅b&#39;, &#39;猪哥大帅b&#39;]
+ print(list(re.finditer(pattern,text))) # [&lt;re.Match object; span=(1, 6), match=&#39;猪哥大帅b&#39;&gt;, &lt;re.Match object; span=(7, 12), match=&#39;猪哥大帅b&#39;&gt;]
+</code></pre>注： 如果可能存在大量的匹配项的haul，建议使用finditer函数，一般情况使用findall函数</li>
+</ol>
+</li>
+<li>分割<br> re.split(pattern,string,maxsplit=0,flags=0)函数：<pre><code> pattern分开string
+ maxsplit表示最多进行分割次数
+ flags表示模式
+</code></pre> 案例：<pre><code>     import re
+     text = &#39;a猪哥大帅b，猪哥大帅b&#39;
+     pattern = r&#39;，&#39;
+     print(re.split(pattern,text,maxsplit=1,flags=re.IGNORECASE))  # [&#39;a猪哥大帅b&#39;, &#39;猪哥大帅b&#39;]
+</code></pre> 注： 在不需要正则支持且数据量和数次不多的情况下使用str.split函数更合适，反之使用re.split函数</li>
+<li>替换<ol>
+<li>re.sub(pattern,repl,string,count=0,flags=0)<br> repl替换掉string中被pattern匹配的字符<br> count表示最大替换次数<br> flags表示正则表达式的常量</li>
+<li>re.subn(pattern,repl,string,count=0,flags=0) 返回一个元组（字符串，替换次数）</li>
+</ol>
+</li>
+<li>编译正则对象<br> compile函数和template函数  将正则表达式的样式编译成一个正则表达式对象<br> 案例：<pre><code>     import re
+     text = &#39;a猪哥大帅b，猪哥大帅b&#39;
+     pattern = r&#39;猪哥大帅b&#39;
+     pattern_obj = re.compile(pattern)
+     print(pattern_obj.search(text).group())
+</code></pre></li>
+<li>其他<br> re.escape(pattern) 可以转义正则表达式中具有特殊含义的字符，如.或*<br> 案例：<pre><code>     import re
+     text = &#39;a猪哥.大帅b，猪哥*大帅b&#39;
+     pattern = re.escape(&#39;猪哥.大帅&#39;)
+     print(&quot;转义后的pattern：&quot;+pattern ) # 转义后的pattern：猪哥\.大帅
+     print(re.search(pattern,text).group())  # 猪哥.大帅
+</code></pre> re.purge()函数只用就是清除正则表达式缓存</li>
+</ol>
 
   </article>
 
   <div class="nexmoe-post-meta nexmoe-rainbow">
     
-        <a class="nexmoefont icon-appstore-fill -link" href="/categories/%E9%98%85%E8%AF%BB/">阅读</a>
+        <a class="nexmoefont icon-appstore-fill -link" href="/categories/python/">python</a>
     
     
-        <a class="nexmoefont icon-tag-fill -link" href="/tags/books/" rel="tag">books</a>
+        <a class="nexmoefont icon-tag-fill -link" href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" rel="tag">正则表达式</a>
     
 </div>
 
@@ -290,7 +471,7 @@
       
   <div class="nexmoe-post-copyright">
     <strong>本文作者：</strong>张如心<br>
-    <strong>本文链接：</strong><a href="http://zrxmzy.github.io.git/2020/04/21/melancholy/" title="http:&#x2F;&#x2F;zrxmzy.github.io.git&#x2F;2020&#x2F;04&#x2F;21&#x2F;melancholy&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;zrxmzy.github.io.git&#x2F;2020&#x2F;04&#x2F;21&#x2F;melancholy&#x2F;</a><br>
+    <strong>本文链接：</strong><a href="http://zrxmzy.github.io.git/2020/04/28/py-re/" title="http:&#x2F;&#x2F;zrxmzy.github.io.git&#x2F;2020&#x2F;04&#x2F;28&#x2F;py-re&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;zrxmzy.github.io.git&#x2F;2020&#x2F;04&#x2F;28&#x2F;py-re&#x2F;</a><br>
     
       <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
     
@@ -320,7 +501,7 @@
   </div>
   <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js,gh/nexmoe/nexmoe.github.io@latest/js/app.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-<!--<script src="/js/app.js?v=1588055313184"></script>-->
+<!--<script src="/js/app.js?v=1588055313404"></script>-->
 
 
     <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
